@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messeges</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styleMessages.css">
+
+</head>
+<script>
+	function addMessage() {
+			if (message.value == "") return false;
+			var list = document.getElementById('list')
+			var firstLi = list.getElementsByTagName('LI')[0]
+			var newListElem = document.createElement('LI')
+			newListElem.innerHTML = message.value
+			newListElem.className = "message"
+			list.insertBefore(newListElem, firstLi)
+	}
+</script>
+<body>
+	<header>
+		<div id="profile">
+			<span id="nameProfile">Jonh Malkovich</span>
+			<img src="img/profile.jpg" alt="">
+		</div>
+		<a href="search.html" class="link" id="searchLink">Search</a>
+		<a href="index.html" class="link">Profile</a>
+		<a href="friends.html" class="link">Friends</a>
+		<a href="messages.html" style="background-color: rgba(47, 44, 44, 0.8)" class="link">Messages</a>
+	</header>
+	<div id="globalBlock">
+		<div id="friendsBlock">Dialogs<hr>
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+				<img class="photoFriends" src="img/profile.jpg">
+		</div>
+		<div id="writeBlock">
+			<textarea name="" id="message"></textarea>
+			<button id="sendMessage" onclick="addMessage()" >Send</button>
+		</div>
+		<div id="messageBlock"><ul id="list"></ul></div>
+	</div>
+</body>
+</html>

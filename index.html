@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styleMain.css">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		function anichange (objName) {
+ 			if ( $(objName).css('display') == 'none' ) {
+ 				$(objName).animate({height: 'show'}, 400);
+		 	} else {
+		 		$(objName).animate({height: 'hide'}, 200);
+		 	}
+		}
+
+		function addMessage() {
+			if (textbox.value == "") return false;
+			var list = document.getElementById('list')
+			var firstLi = list.getElementsByTagName('LI')[0]
+			var newListElem = document.createElement('LI')
+			newListElem.innerHTML = textbox.value
+			newListElem.className = "message"
+			list.insertBefore(newListElem, firstLi)
+		}
+	</script>
+
+</head>
+<body>
+			<!-- <input type="text" id="search"> -->
+		<header>
+			<div id="profile">
+				<span id="nameProfile">Jonh Malkovich</span>
+				<img src="img/profile.jpg" alt="">
+			</div>
+			<a href="search.html" class="link" id="searchLink">Search</a>
+			<a href="index.html" style="background-color: rgba(47, 44, 44, 0.8)" class="link">Profile</a>
+			<a href="friends.html" class="link">Friends</a>
+			<a href="messages.html" class="link">Messages</a>
+		</header>
+		<div id="globalBlock">
+			<div id="leftSection">
+				<div id="photoSection">
+					<div id="profilePhoto" style="background: url('img/profile.jpg') center; -webkit-background-size: cover;background-size: cover;">
+					</div>
+					<div id="profileGalary">
+						<!--Цикл що виводить блоки фоток з бд-->
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">
+						<img class="photo" src="img/profile.jpg">							
+						<!-- Фотки -->
+					</div>
+				</div>
+				<div id="profileName">
+					<span>Jonh Malkovich</span>
+					<hr class="line">
+					<span>New York</span>
+				</div>
+				<div id="profileAttributs">
+					<div id="friendsBlock">
+						<a href="friends.html">Friends</a>
+						<hr>
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<img class="photoFriends" src="img/profile.jpg">
+						<!--<li>
+							Цикл що виводить блоки друзів з бд
+						</li>-->
+					</div>
+						<div id="wallBlock">
+							<label>Wall</label>
+							<hr>
+							<textarea name="" id="textbox"></textarea>
+							<input type="button" id="writeInWall" onclick="addMessage()"value="Write">
+						</div>
+						<ul id="list">
+						</ul>
+				</div>
+			</div>
+			<div id="rightSection">
+				<div id="interests">
+					<span class="interests" onclick="anichange('#about'); return false">About me</span><br>
+					<div id="about" class="interese"style="display: none">
+					Тут тукст<br>
+					Тут текст <br>
+					Тут текст <br>
+					Тут текст<br>
+					</div> 
+					<span class="interests" onclick="anichange('#music'); return false">My audio</span><br>
+					<div id="music" class="interese" style="display: none">
+					Тут sdfa<br>
+					Тут текст <br>
+					Тут текст <br>
+					Тут текст<br>
+					</div> 
+					<span class="interests" onclick="anichange('#movie'); return false">My video</span><br>
+					<div id="movie" class="interese" style="display: none">
+					Тут тукст<br>
+					Тут текст <br>
+					Тут текст <br>
+					Тут текст<br>
+					</div> 
+					<span class="interests" onclick="anichange('#groups'); return false">My groups</span><br>
+					<div id="groups" class="interese" style="display: none">
+					Тут тукст<br>
+					Тут текст <br>
+					Тут текст <br>
+					Тут текст<br>
+					</div> 
+				</div>
+			</div>
+			</div>
+</body>
+</html>
