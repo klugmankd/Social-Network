@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="css/styleSearch.css">
 </head>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
 <script>
 	function anichange (objName) {
 		if ( $(objName).css('display') == 'none' ) {
@@ -21,13 +23,19 @@
 	<header>
 		<div id="profile">
 			<span id="nameProfile">Jonh Malkovich</span>
-			<img src="img/profile.jpg" alt="">
+			<img src="img/profile.jpg" onmouseover="anichanged('#profileTools'); return false" alt="">
+				<div id="profileTools" style="display: none">
+					<p class="tools"><a href="index.html">Profile</a></p>
+					<p class="tools"><a href="editProfile.html">Edit profile</a></p>
+					<p class="tools"><a href="auth.html">Exit</a></p>
+				</div>
 		</div>
 		<a href="search.html" style="background-color: rgba(47, 44, 44, 0.8)" class="link" id="searchLink">Search</a>
 		<a href="index.html" class="link">Profile</a>
 		<a href="friends.html" class="link">Friends</a>
 		<a href="messages.html" class="link">Messages</a>
 	</header>
+	<div style="width: 100%; height: 80vh;" onmouseover="unanichanged('#profileTools'); return false">
 	<div id="globalBlock">
 		<div id="searchBlock">
 			<input type="text" id="searchLine" placeholder="what are u search?">
@@ -40,6 +48,7 @@
 					fnkeujfkernvkej <br>
 					fnkeujfkernvkej<br>
 					</div> 
+	</div>
 	</div>
 </body>
 </html>

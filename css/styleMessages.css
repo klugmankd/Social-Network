@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 * {
 	margin: 0;
@@ -40,6 +40,7 @@ a {
 }
 
 #friendsBlock {
+	color: #686868;
 	display: inline-block;
 	float: left;
 	width: 55px;
@@ -57,6 +58,7 @@ a {
 
 #messageBlock {
 	background-color: #FFF;
+	margin-top: 5px;
 }
 
 ul {
@@ -67,6 +69,7 @@ ul {
 .message {
 	padding: 10px;
 	/*border: 1px solid silver;*/
+	color: #686868;
 }
 
 #writeBlock {
@@ -74,10 +77,12 @@ ul {
 }
 
 #message {
-	margin-left: 5%;
+	color: rgb(100, 98, 98);
+	font-family: "Times new romans";
+	margin-left: 3%;
 	width: 80%;
 	height: 60px;
-	margin: 1%;
+	margin-top: 1%;
 	resize: none;
 	outline: none;
 	display: inline-block;
@@ -100,7 +105,7 @@ ul {
 }
 
 #sendMessage:hover {
-		background-color: rgb(173, 173, 173);
+	background-color: rgb(173, 173, 173);
 }
 
 .photoFriends {

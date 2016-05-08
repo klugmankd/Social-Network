@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 * {
 	margin: 0;
@@ -51,4 +51,32 @@ a {
 	height: 70px;
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
+}
+
+#profileTools {
+	position: absolute;
+	padding: 7px;
+	/*width:90px;*/
+	background-color: rgb(30, 28, 28);
+	border-radius: 10px;
+	color: #f7f7f7;
+	z-index: 228;
+	margin-left: 100px;
+	margin-top: 5px;
+	cursor: pointer;	
+}
+
+.tools {
+	width: 100%;
+	padding: 4px;
+}
+
+.tools:hover {
+	padding: 5px;
+	background-color: rgba(47, 44, 44, .95);
+}
+
+.tools a {
+	text-decoration: none;
+	color: #f7f7f7;	
 }
